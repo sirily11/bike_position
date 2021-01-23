@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct bike_positionApp: App {
+
+    @StateObject var bikeModel: BikeModel = BikeModel()
+    @StateObject var locationModel: LocationManager = LocationManager()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
+                .environmentObject(bikeModel)
+                .environmentObject(locationModel)
         }
     }
 }

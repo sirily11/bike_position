@@ -3,16 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25A0AF4225BB4BF20067D3F6 /* BikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3A25BB4BF20067D3F6 /* BikeList.swift */; };
+		25A0AF4325BB4BF20067D3F6 /* BikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3A25BB4BF20067D3F6 /* BikeList.swift */; };
+		25A0AF4425BB4BF20067D3F6 /* BikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3A25BB4BF20067D3F6 /* BikeList.swift */; };
+		25A0AF4525BB4BF20067D3F6 /* bikeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3B25BB4BF20067D3F6 /* bikeForm.swift */; };
+		25A0AF4625BB4BF20067D3F6 /* bikeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3B25BB4BF20067D3F6 /* bikeForm.swift */; };
+		25A0AF4725BB4BF20067D3F6 /* bikeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3B25BB4BF20067D3F6 /* bikeForm.swift */; };
+		25A0AF4825BB4BF20067D3F6 /* BikeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3C25BB4BF20067D3F6 /* BikeRow.swift */; };
+		25A0AF4925BB4BF20067D3F6 /* BikeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3C25BB4BF20067D3F6 /* BikeRow.swift */; };
+		25A0AF4A25BB4BF20067D3F6 /* BikeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3C25BB4BF20067D3F6 /* BikeRow.swift */; };
+		25A0AF4B25BB4BF20067D3F6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3D25BB4BF20067D3F6 /* HomeScreen.swift */; };
+		25A0AF4C25BB4BF20067D3F6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3D25BB4BF20067D3F6 /* HomeScreen.swift */; };
+		25A0AF4D25BB4BF20067D3F6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3D25BB4BF20067D3F6 /* HomeScreen.swift */; };
+		25A0AF4E25BB4BF20067D3F6 /* BikeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3F25BB4BF20067D3F6 /* BikeViewModel.swift */; };
+		25A0AF4F25BB4BF20067D3F6 /* BikeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3F25BB4BF20067D3F6 /* BikeViewModel.swift */; };
+		25A0AF5025BB4BF20067D3F6 /* BikeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF3F25BB4BF20067D3F6 /* BikeViewModel.swift */; };
+		25A0AF5125BB4BF20067D3F6 /* bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF4025BB4BF20067D3F6 /* bike.swift */; };
+		25A0AF5225BB4BF20067D3F6 /* bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF4025BB4BF20067D3F6 /* bike.swift */; };
+		25A0AF5325BB4BF20067D3F6 /* bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF4025BB4BF20067D3F6 /* bike.swift */; };
+		25A0AF5425BB4BF20067D3F6 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF4125BB4BF20067D3F6 /* LocationModel.swift */; };
+		25A0AF5525BB4BF20067D3F6 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF4125BB4BF20067D3F6 /* LocationModel.swift */; };
+		25A0AF5625BB4BF20067D3F6 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A0AF4125BB4BF20067D3F6 /* LocationModel.swift */; };
+		25A0AF5F25BB4C950067D3F6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 25A0AF5E25BB4C950067D3F6 /* RealmSwift */; };
 		25A7AADC25BB4B6100E67135 /* bike_positionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7AADB25BB4B6100E67135 /* bike_positionApp.swift */; };
-		25A7AADE25BB4B6100E67135 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7AADD25BB4B6100E67135 /* ContentView.swift */; };
 		25A7AAE025BB4B6300E67135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A7AADF25BB4B6300E67135 /* Assets.xcassets */; };
 		25A7AAE325BB4B6300E67135 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A7AAE225BB4B6300E67135 /* Preview Assets.xcassets */; };
 		25A7AAEE25BB4B6300E67135 /* bike_positionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7AAED25BB4B6300E67135 /* bike_positionTests.swift */; };
 		25A7AAF925BB4B6300E67135 /* bike_positionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7AAF825BB4B6300E67135 /* bike_positionUITests.swift */; };
+		25BE443525BBFB36007E8453 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE443425BBFB36007E8453 /* DetailPage.swift */; };
+		25BE443E25BC3F6B007E8453 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BE443D25BC3F6B007E8453 /* Converter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25A0AF3A25BB4BF20067D3F6 /* BikeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeList.swift; sourceTree = "<group>"; };
+		25A0AF3B25BB4BF20067D3F6 /* bikeForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bikeForm.swift; sourceTree = "<group>"; };
+		25A0AF3C25BB4BF20067D3F6 /* BikeRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeRow.swift; sourceTree = "<group>"; };
+		25A0AF3D25BB4BF20067D3F6 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		25A0AF3F25BB4BF20067D3F6 /* BikeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeViewModel.swift; sourceTree = "<group>"; };
+		25A0AF4025BB4BF20067D3F6 /* bike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bike.swift; sourceTree = "<group>"; };
+		25A0AF4125BB4BF20067D3F6 /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		25A7AAD825BB4B6100E67135 /* bike_position.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bike_position.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A7AADB25BB4B6100E67135 /* bike_positionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bike_positionApp.swift; sourceTree = "<group>"; };
-		25A7AADD25BB4B6100E67135 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		25A7AADF25BB4B6300E67135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25A7AAE225BB4B6300E67135 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25A7AAE425BB4B6300E67135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +74,8 @@
 		25A7AAF425BB4B6300E67135 /* bike_positionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bike_positionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A7AAF825BB4B6300E67135 /* bike_positionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bike_positionUITests.swift; sourceTree = "<group>"; };
 		25A7AAFA25BB4B6300E67135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25BE443425BBFB36007E8453 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
+		25BE443D25BC3F6B007E8453 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A0AF5F25BB4C950067D3F6 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +104,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25A0AF3725BB4BF20067D3F6 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				25BE443325BBFB29007E8453 /* detail */,
+				25A0AF3825BB4BF20067D3F6 /* home */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		25A0AF3825BB4BF20067D3F6 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				25A0AF3925BB4BF20067D3F6 /* components */,
+				25A0AF3D25BB4BF20067D3F6 /* HomeScreen.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		25A0AF3925BB4BF20067D3F6 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				25A0AF3A25BB4BF20067D3F6 /* BikeList.swift */,
+				25A0AF3B25BB4BF20067D3F6 /* bikeForm.swift */,
+				25A0AF3C25BB4BF20067D3F6 /* BikeRow.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		25A0AF3E25BB4BF20067D3F6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				25BE443C25BC3F5D007E8453 /* utils */,
+				25A0AF3F25BB4BF20067D3F6 /* BikeViewModel.swift */,
+				25A0AF4025BB4BF20067D3F6 /* bike.swift */,
+				25A0AF4125BB4BF20067D3F6 /* LocationModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		25A7AACF25BB4B6100E67135 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +166,9 @@
 		25A7AADA25BB4B6100E67135 /* bike_position */ = {
 			isa = PBXGroup;
 			children = (
+				25A0AF3E25BB4BF20067D3F6 /* model */,
+				25A0AF3725BB4BF20067D3F6 /* views */,
 				25A7AADB25BB4B6100E67135 /* bike_positionApp.swift */,
-				25A7AADD25BB4B6100E67135 /* ContentView.swift */,
 				25A7AADF25BB4B6300E67135 /* Assets.xcassets */,
 				25A7AAE425BB4B6300E67135 /* Info.plist */,
 				25A7AAE125BB4B6300E67135 /* Preview Content */,
@@ -130,6 +202,22 @@
 			path = bike_positionUITests;
 			sourceTree = "<group>";
 		};
+		25BE443325BBFB29007E8453 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				25BE443425BBFB36007E8453 /* DetailPage.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		25BE443C25BC3F5D007E8453 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				25BE443D25BC3F6B007E8453 /* Converter.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +234,9 @@
 			dependencies = (
 			);
 			name = bike_position;
+			packageProductDependencies = (
+				25A0AF5E25BB4C950067D3F6 /* RealmSwift */,
+			);
 			productName = bike_position;
 			productReference = 25A7AAD825BB4B6100E67135 /* bike_position.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +308,9 @@
 				Base,
 			);
 			mainGroup = 25A7AACF25BB4B6100E67135;
+			packageReferences = (
+				25A0AF5D25BB4C950067D3F6 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 25A7AAD925BB4B6100E67135 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +353,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A7AADE25BB4B6100E67135 /* ContentView.swift in Sources */,
+				25A0AF5125BB4BF20067D3F6 /* bike.swift in Sources */,
+				25A0AF4525BB4BF20067D3F6 /* bikeForm.swift in Sources */,
+				25A0AF4225BB4BF20067D3F6 /* BikeList.swift in Sources */,
+				25A0AF4B25BB4BF20067D3F6 /* HomeScreen.swift in Sources */,
+				25BE443E25BC3F6B007E8453 /* Converter.swift in Sources */,
+				25A0AF5425BB4BF20067D3F6 /* LocationModel.swift in Sources */,
 				25A7AADC25BB4B6100E67135 /* bike_positionApp.swift in Sources */,
+				25BE443525BBFB36007E8453 /* DetailPage.swift in Sources */,
+				25A0AF4E25BB4BF20067D3F6 /* BikeViewModel.swift in Sources */,
+				25A0AF4825BB4BF20067D3F6 /* BikeRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A0AF5525BB4BF20067D3F6 /* LocationModel.swift in Sources */,
+				25A0AF4325BB4BF20067D3F6 /* BikeList.swift in Sources */,
+				25A0AF4F25BB4BF20067D3F6 /* BikeViewModel.swift in Sources */,
+				25A0AF4C25BB4BF20067D3F6 /* HomeScreen.swift in Sources */,
+				25A0AF5225BB4BF20067D3F6 /* bike.swift in Sources */,
+				25A0AF4625BB4BF20067D3F6 /* bikeForm.swift in Sources */,
 				25A7AAEE25BB4B6300E67135 /* bike_positionTests.swift in Sources */,
+				25A0AF4925BB4BF20067D3F6 /* BikeRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +385,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A0AF5625BB4BF20067D3F6 /* LocationModel.swift in Sources */,
+				25A0AF4425BB4BF20067D3F6 /* BikeList.swift in Sources */,
+				25A0AF5025BB4BF20067D3F6 /* BikeViewModel.swift in Sources */,
+				25A0AF4D25BB4BF20067D3F6 /* HomeScreen.swift in Sources */,
+				25A0AF5325BB4BF20067D3F6 /* bike.swift in Sources */,
+				25A0AF4725BB4BF20067D3F6 /* bikeForm.swift in Sources */,
 				25A7AAF925BB4B6300E67135 /* bike_positionUITests.swift in Sources */,
+				25A0AF4A25BB4BF20067D3F6 /* BikeRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +696,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25A0AF5D25BB4C950067D3F6 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		25A0AF5E25BB4C950067D3F6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25A0AF5D25BB4C950067D3F6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 25A7AAD025BB4B6100E67135 /* Project object */;
 }

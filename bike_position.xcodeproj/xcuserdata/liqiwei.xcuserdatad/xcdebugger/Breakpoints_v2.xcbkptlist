@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7F21976E-5D2B-4692-86DF-3C06570ACB61"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "425EBBCE-57C0-4728-A47D-9B486037AB22"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "bike_position/model/BikeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fetchAllActiveBikes()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "425EBBCE-57C0-4728-A47D-9B486037AB22 - a8167a3d04f8c7a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bike_position.BikeModel.(fetchAllActiveBikes in _9B2151B39B8C3AF35BDFF4F92956CC09)() -&gt; ()"
+                  moduleName = "bike_position"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liqiwei/Desktop/bike_position/bike_position/model/BikeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "442">
+               </Location>
+               <Location
+                  uuid = "425EBBCE-57C0-4728-A47D-9B486037AB22 - 31331248525b99a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (bike_position.BikeHistoryDB) -&gt; bike_position.BikeHistory in bike_position.BikeModel.(fetchAllActiveBikes in _9B2151B39B8C3AF35BDFF4F92956CC09)() -&gt; ()"
+                  moduleName = "bike_position"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liqiwei/Desktop/bike_position/bike_position/model/BikeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4E8E1DE-B41D-4769-8F0C-458B71222C6B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "bike_position/model/BikeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "updateBike(bikeId:name:isActived:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4E8E1DE-B41D-4769-8F0C-458B71222C6B - a44908b2900e180f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in bike_position.BikeModel.updateBike(bikeId: Swift.String, name: Swift.Optional&lt;Swift.String&gt;, isActived: Swift.Optional&lt;Swift.Bool&gt;) -&gt; ()"
+                  moduleName = "bike_position"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liqiwei/Desktop/bike_position/bike_position/model/BikeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  uuid = "A4E8E1DE-B41D-4769-8F0C-458B71222C6B - 224c0a1d80ae9957"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (bike_position.BikeHistory) -&gt; Swift.Bool in closure #1 () -&gt; () in bike_position.BikeModel.updateBike(bikeId: Swift.String, name: Swift.Optional&lt;Swift.String&gt;, isActived: Swift.Optional&lt;Swift.Bool&gt;) -&gt; ()"
+                  moduleName = "bike_position"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liqiwei/Desktop/bike_position/bike_position/model/BikeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6AABC47-ECA4-4725-AEA7-14E92989269E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "bike_position/model/BikeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "updateBike(bikeId:name:isActived:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
