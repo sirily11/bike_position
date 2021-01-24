@@ -15,11 +15,13 @@ struct BikeForm: View {
     @EnvironmentObject var locationModel: LocationManager
     @State var tracking: MapUserTrackingMode = .follow
     @State private var showingAlert = false
-    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    @State var region: MKCoordinateRegion
+
     let dateFormatterGet = DateFormatter()
 
-    init(show: Binding<ActiveSheet?>) {
+    init(show: Binding<ActiveSheet?>, region: MKCoordinateRegion) {
         self._show = show
+        self._region = State(initialValue: region)
         dateFormatterGet.dateFormat = "yyyy-MM-dd"
     }
 
@@ -52,13 +54,9 @@ struct BikeForm: View {
                         if(name.isEmpty) {
                             showingAlert = true
                         }
-                       
-                        if let location = locationModel.lastLocation {
 
-                            bikeModel.addBike(bike: BikeHistory(name: name, location: location, time: Date(), isActived: true))
-                            show = nil
-                        }
-
+                        bikeModel.addBike(bike: BikeHistory(name: name, location: locationModel.lastLocation!, time: Date(), isActived: true))
+                        show = nil
                     }) {
                         HStack {
                             Text("Submit")
@@ -82,13 +80,12 @@ struct BikeForm: View {
                         }
                     }
 
-            }
-        }
-
-            .onAppear {
-                if let cord = locationModel.lastLocation?.coordinate {
-                    region = MKCoordinateRegion(center: cord, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
                 }
+
+                .onAppear {
+
+
+            }
         }
 
     }
@@ -97,9 +94,10 @@ struct BikeForm: View {
 
 struct PreviewWrapper: View {
     @State var show: ActiveSheet?
+    var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
 
     var body: some View {
-        BikeForm(show: $show)
+        BikeForm(show: $show, region: region)
     }
 }
 

@@ -18,17 +18,21 @@ struct Pin: Identifiable {
 struct DetailPage: View {
     let bike: BikeHistory
     @EnvironmentObject var bikeModel: BikeModel
-    @State var hasInit = false
     @State var tracking: MapUserTrackingMode = .follow
-    @State var name = ""
-    @State var isActived: Bool = false
+    @State var name: String
+    @State var isActived: Bool {
+        didSet {
+            bikeModel.updateBike(bikeId: bike.id, name: nil, isActived: isActived)
+        }
+    }
     @State var region: MKCoordinateRegion? = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
 
     var pins: [Pin]
 
     init(bike: BikeHistory) {
         self.bike = bike
-
+        self._name = State(initialValue: bike.name)
+        self._isActived = State(initialValue: bike.isActived)
         pins = [Pin(location: bike.location.coordinate)]
 
     }
@@ -48,6 +52,11 @@ struct DetailPage: View {
 
 
     var body: some View {
+        let bind = Binding<Bool>(
+            get: { self.isActived },
+            set: { self.isActived = $0 }
+        )
+
         VStack {
             if region != nil {
                 Map(coordinateRegion: Binding($region)!, interactionModes: .all, showsUserLocation: true, userTrackingMode: $tracking, annotationItems: pins) { place in
@@ -64,28 +73,22 @@ struct DetailPage: View {
                 TextField("Name", text: $name, onEditingChanged: { _ in }, onCommit: { bikeModel.updateBike(bikeId: bike.id, name: name, isActived: nil) })
                     .padding(.bottom, 10.0)
 
-                Toggle(isOn: $isActived) {
+                Divider()
+                Toggle(isOn: bind) {
                     Text("Is Actived")
                 }
-                    .onReceive([isActived].publisher.first(), perform: { value in
-                        if hasInit {
-                            bikeModel.updateBike(bikeId: bike.id, name: nil, isActived: value)
-                        }
-                    })
+
 
 
             }
+
                 .padding()
         }
+
             .onAppear {
                 region = MKCoordinateRegion(center: bike.location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
-                isActived = bike.isActived
-                name = bike.name
-                hasInit = true
 
-            }
-            .onDisappear {
-                bikeModel.fetchBikes()
+
             }
             .toolbar {
                 Button(action: {
@@ -93,7 +96,8 @@ struct DetailPage: View {
                 }) {
                     Image(systemName: "map.fill")
                 }
-        }
+            }
+            .navigationTitle("\(bike.name)")
 
 
     }

@@ -42,13 +42,13 @@ struct HomeScreen: View {
                 }
                 .sheet(item: $activeSheet) {
                     item in
-                    BikeForm(show: $activeSheet)
+                    BikeForm(show: $activeSheet, region: locationModel.lastRegion)
                         .environmentObject(bikeModel)
                         .environmentObject(locationModel)
             }
         }
             .onAppear {
-                bikeModel.fetchBikes()
+                
         }
     }
 

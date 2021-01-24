@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 import CoreLocation
+import WidgetKit
 
 extension Results {
     func toArray() -> [Element] {
@@ -21,7 +22,7 @@ extension Results {
 
 class BikeModel: ObservableObject {
     let realm: Realm?
-
+    var token: NotificationToken?
     private var bikesDB: [BikeHistoryDB] = []
 
     @Published var bikes: [BikeHistory] = []
@@ -31,8 +32,39 @@ class BikeModel: ObservableObject {
         }
     }
 
-    init() {
-        self.realm = try! Realm()
+    init(shouldLoad: Bool = true) {
+        let fileURL = FileManager.default
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.sirilee.bike-position")!
+            .appendingPathComponent("default.realm")
+        let config = Realm.Configuration(fileURL: fileURL)
+        self.realm = try! Realm(configuration: config)
+        if shouldLoad {
+            self.fetchBikes()
+            if let realm = self.realm {
+                token = realm.objects(BikeHistoryDB.self).observe {
+                    (changeset: RealmCollectionChange) in
+                    switch changeset {
+                    case .update(let bks, let deletetions, let insertions, let mofidications):
+                        //                    print("\(bks), \(deletetions), \(insertions), \(mofidications)")
+                        self.fetchBikes()
+                        WidgetCenter.shared.reloadTimelines(ofKind: "bike_widget")
+                    case .initial(_):
+                        print("Init")
+                    case .error(_):
+                        print("Error")
+                    }
+
+                }
+            }
+        }
+    }
+
+    func getLatestBike() -> BikeHistory? {
+        let result = realm?.objects(BikeHistoryDB.self).filter("isActived = true").first
+        if let result = result {
+            return BikeHistory(bike: result)
+        }
+        return nil
     }
 
     func fetchBikes() {
@@ -41,6 +73,8 @@ class BikeModel: ObservableObject {
         } else {
             fetchFrozenBikes()
         }
+
+
     }
 
 
@@ -83,8 +117,7 @@ class BikeModel: ObservableObject {
         try! realm?.write {
             realm?.delete(bikesDB[index])
             bikes.remove(at: index)
-
-            bikesDB.remove(at: index)
+//            bikesDB.remove(at: index)
 
         }
 
