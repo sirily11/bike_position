@@ -11,7 +11,6 @@ import MapKit
 import CoreLocation
 
 struct Provider: TimelineProvider {
-    let bikeModel = BikeModel(shouldLoad: false)
     let location = CLLocation(latitude: 37.33555162843349, longitude: -122.0146692306286)
 
 
@@ -52,7 +51,7 @@ struct Provider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (BikeEntry) -> Void) {
-        let bike = bikeModel.getLatestBike() ?? BikeHistory(name: "My Bike", location: location, time: Date(), isActived: true)
+        let bike = BikeHistory(name: "My Bike", location: location, time: Date(), isActived: true)
 
         let mapSnapshotter = makeMapSnapshotter(location: bike.location, size: context.displaySize)
         mapSnapshotter.start {
@@ -68,7 +67,7 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<BikeEntry>) -> Void) {
-
+        let bikeModel = BikeModel(shouldLoad: false)
         let bike = bikeModel.getLatestBike()
         if let bike = bike {
             let mapSnapshotter = makeMapSnapshotter(location: bike.location, size: context.displaySize)

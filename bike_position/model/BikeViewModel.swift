@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 import CoreLocation
 import WidgetKit
+import SwiftUI
 
 extension Results {
     func toArray() -> [Element] {
@@ -68,19 +69,20 @@ class BikeModel: ObservableObject {
     }
 
     func fetchBikes() {
-        if(selectedIndex == 0) {
-            fetchAllActiveBikes()
-        } else {
-            fetchFrozenBikes()
+        withAnimation {
+            if(selectedIndex == 0) {
+                fetchAllActiveBikes()
+            } else {
+                fetchFrozenBikes()
+            }
         }
-
 
     }
 
 
     private func fetchAllActiveBikes() {
         print("fetch 1")
-        let results = realm?.objects(BikeHistoryDB.self).filter("isActived = true")
+        let results = realm?.objects(BikeHistoryDB.self).filter("isActived = true").sorted(byKeyPath: "time")
 
         if let results = results {
             bikesDB = results.toArray()
@@ -93,7 +95,7 @@ class BikeModel: ObservableObject {
 
     private func fetchFrozenBikes() {
         print("fetch 2")
-        let results = realm?.objects(BikeHistoryDB.self).filter("isActived = false")
+        let results = realm?.objects(BikeHistoryDB.self).filter("isActived = false").sorted(byKeyPath: "time")
         if let results = results {
             bikesDB = results.toArray()
             bikes = results.map {
@@ -124,11 +126,11 @@ class BikeModel: ObservableObject {
     }
 
     func updateBike(bikeId: String, name: String?, isActived: Bool?) {
-        try! realm?.write {
-            let index = bikes.firstIndex(where: { bike in bike.id == bikeId })
 
-            if let index = index {
-                let bikeDB = bikesDB[index]
+        try! realm?.write {
+            let bikeDB = realm?.objects(BikeHistoryDB.self).filter("id = '\(bikeId)'").first
+
+            if let bikeDB = bikeDB {
 
                 if let name = name {
                     bikeDB.name = name

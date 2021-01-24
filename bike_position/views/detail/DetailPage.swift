@@ -22,6 +22,7 @@ struct DetailPage: View {
     @State var name: String
     @State var isActived: Bool {
         didSet {
+
             bikeModel.updateBike(bikeId: bike.id, name: nil, isActived: isActived)
         }
     }
@@ -97,7 +98,7 @@ struct DetailPage: View {
                     Image(systemName: "map.fill")
                 }
             }
-            .navigationTitle("\(bike.name)")
+            .navigationTitle("\(name)")
 
 
     }
